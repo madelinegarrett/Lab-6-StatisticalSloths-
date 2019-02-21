@@ -106,6 +106,19 @@ ggplot(data=delay_carrier_CO) +
 ## Kevin's Individual Section
 How does the probability of a departure delay from DEN caused by weather change based on the month?
 
+* January: 164/17030
+* February: 122/15533
+* March: 55/18659
+* April: 63/17704
+* May: 103/19122
+* June: 119/19901
+* July: 128/20643
+* August: 204/20891
+* September: 23/18831
+* October: 38/19181
+* November: 24/17627
+* December: 127/18043
+
 ```{r}
 delay_month_CO <- COflights %>%
   filter(ORIGIN=="DEN") %>%
