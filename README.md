@@ -110,10 +110,10 @@ How does the probability of a weather departure delay from DEN change based on m
 delay_month_CO <- COflights %>%
   filter(ORIGIN=="DEN") %>%
   group_by(MONTH) %>%
-  filter(WEATHER_DELAY>28)
+  filter(WEATHER_DELAY>=15)
 
 ggplot(data=delay_month_CO) + 
-  geom_bar(mapping = aes(x=MONTH, fill=as.factor(MONTH)))
+  geom_histogram(mapping = aes(x=MONTH, fill=as.factor(MONTH)), binwidth = 1)
 ```
 ## Team Summary 
 I, Madeline Garrett, worked to determine which airline had the most delayed departures from Denver. I used the count function to find a collection of probabilities and found that the airline with the most delayed departures was Southwest. I used the geom bar function and made two plots that should help to illustrate which airlines had the most delays. I labeled both axis and header and use the alpha function on one of the graphs. 
