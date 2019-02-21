@@ -83,8 +83,6 @@ There are 41,376 delayed flights total, of these delayed flights.
 
 Madeline's Findings: Of the flights that were delayed, it appeared that a majority of those flights were flights that were United Airlines and Southwest. The least amount of delays were from EV and AS and B6 and VX.  
 
-
-
 ```{r}
 delay_carrier_CO <- COflights %>%
   filter(ORIGIN=="DEN") %>%
@@ -103,21 +101,24 @@ ggplot(data=delay_carrier_CO) +
   xlab("Carriers") + 
   ylab("Number of Late Arrivals")
 ```
+
 ## Kevin's Individual Section
 How does the probability of a departure delay from DEN caused by weather change based on the month?
 
-* January: 164/17030
-* February: 122/15533
-* March: 55/18659
-* April: 63/17704
-* May: 103/19122
-* June: 119/19901
-* July: 128/20643
-* August: 204/20891
-* September: 23/18831
-* October: 38/19181
-* November: 24/17627
-* December: 127/18043
+* January: 164/17030 = 0.96%
+* February: 122/15533 = 0.79%
+* March: 55/18659 = 0.35%
+* April: 63/17704 = 0.36%
+* May: 103/19122 = 0.54%
+* June: 119/19901 = 0.60%
+* July: 128/20643 = 0.62%
+* August: 204/20891 = 0.97%
+* September: 23/18831 = 0.12%
+* October: 38/19181 = 0.20%
+* November: 24/17627 = 0.13%
+* December: 127/18043 = 0.70%
+
+Findings: 
 
 ```{r}
 delay_month_CO <- COflights %>%
@@ -128,5 +129,12 @@ delay_month_CO <- COflights %>%
 ggplot(data=delay_month_CO) + 
   geom_histogram(mapping = aes(x=MONTH, fill=as.factor(MONTH)), binwidth = 1)
 ```
+
+## Katie's Individual Section
+
+
+## Zandy's Individual Section
+
+
 ## Team Summary 
 I, Madeline Garrett, worked to determine which airline had the most delayed departures from Denver. I used the count function to find a collection of probabilities and found that the airline with the most delayed departures was Southwest. I used the geom bar function and made two plots that should help to illustrate which airlines had the most delays. I labeled both axis and header and use the alpha function on one of the graphs. 
