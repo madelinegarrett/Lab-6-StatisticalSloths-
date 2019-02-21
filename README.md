@@ -105,6 +105,7 @@ ggplot(data=delay_carrier_CO) +
 ## Kevin's Individual Section
 How does the probability of a departure delay from DEN caused by weather change based on the month?
 
+(Flights delayed by weather in month/Total flights in month)
 * January: 164/17030 = 0.96%
 * February: 122/15533 = 0.79%
 * March: 55/18659 = 0.35%
@@ -118,7 +119,7 @@ How does the probability of a departure delay from DEN caused by weather change 
 * November: 24/17627 = 0.13%
 * December: 127/18043 = 0.70%
 
-Findings: 
+Findings: The months with the highest probablities of having a weather delay are August, January, February, and December. Seasonally speaking, the winter and summer months have higher probabilities of experiencing delays due to weather, whereas the spring and fall months have relatively low probabilities.
 
 ```{r}
 delay_month_CO <- COflights %>%
