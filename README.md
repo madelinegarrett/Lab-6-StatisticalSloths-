@@ -151,7 +151,7 @@ Does the distance between Denver and the origin airport effect arrival delays?
 Katie's Findings: As the distance of the origin airport from Denver increases, the probability that that flight will be delayed by at least 15 minutes increases.delay 
 
 ## Zandy's Individual Section
-How does the probabily of a delayed flight from Denver or a delayed flight to Denver change based on the scheduled arrival time of the plane and/pr the scheduled departure time of the plane.
+How does the probabily of a delayed flight from Denver or a delayed flight to Denver change based on the scheduled arrival time of the plane and/or the scheduled departure time of the plane.
 
 
 ## Team Summary 
