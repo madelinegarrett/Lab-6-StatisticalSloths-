@@ -15,6 +15,26 @@ summary(COflights)
 ```
 # Team Section 
 Question 1: Determine what factors increase the probability of a delayed arrival and decrease the probability of a delayed arrival.
+
+```{r}
+delay_carrier_CO <- COflights %>%
+  filter(ORIGIN=="DEN") %>%
+  group_by(CARRIER) %>%
+  filter(ARR_DELAY >= 15)
+
+
+ggplot(data = delay_carrier_CO) + 
+  geom_bar(mapping = aes(x=MONTH, fill=as.factor(MONTH)))+
+facet_grid(~as.factor(MONTH))
+
+
+
+ggplot(data = delay_carrier_CO) + 
+  geom_bar(mapping = aes(x = MONTH))
+
+```
+
+
 ```{r}
 count(COflights, DEST == "DEN", MONTH == 1, ARR_DELAY != "NA")
 count(COflights, DEST == "DEN", MONTH ==1, ARR_DELAY >= 15)
