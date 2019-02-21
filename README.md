@@ -53,7 +53,12 @@ COflights %>%
   filter(LATE_AIRCRAFT_DELAY>0) %>%
   summarise(late_aircraft=n())
 ```
-
+### Probabilities for Delays by: Carrier Delay, Weather Delay, NAS Delay, Security DEelay, and Aircraft Delay
+Carrier Delay = 41209/163855 = 0.2515 = 25.15%
+Weather Delay = 3725/163855 = 0.0227 = 2.27%
+NAS Delay = 44416/163855 = 0.271 = 27.1%
+Security Delay = 135/163855 = 0.000824 = 0.0824%
+Aircraft Delay = 43470/163855 = 0.265 = 26.5%
 ## Madeline's Individual Section 
 Does Leaving Denver on a Specific Carrier's Flight Increase the Probability That Your Flight Will Be Delayed?
 
