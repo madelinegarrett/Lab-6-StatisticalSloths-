@@ -139,6 +139,7 @@ ggplot(data=delay_month_CO) +
 
 
 ## Zandy's Individual Section
+How does the probabily of a delayed flight from Denver or a delayed flight to Denver change based on the scheduled arrival time of the plane and/pr the scheduled departure time of the plane.
 
 
 ## Team Summary 
