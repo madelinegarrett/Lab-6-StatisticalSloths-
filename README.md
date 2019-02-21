@@ -136,7 +136,11 @@ ggplot(data=delay_month_CO) +
 ```
 
 ## Katie's Individual Section
-
+Does the distance between Denver and the origin airport effect arrival delays?
+(Flights delayed by 15 minutes or longer that had an origin over ___ miles away / total flights that arrived in Denver from that distance)
+250 Miles: 33954/214479 = 0.1583092       
+500 Miles: 30796/191562 = 0.1607626
+1000 Miles: 10780/64615 = 0.1668343
 
 ## Zandy's Individual Section
 How does the probabily of a delayed flight from Denver or a delayed flight to Denver change based on the scheduled arrival time of the plane and/pr the scheduled departure time of the plane.
