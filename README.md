@@ -133,8 +133,6 @@ ggplot(data=delay_month_CO) +
   xlab("Month") + 
   ylab("# of flights") + 
   scale_fill_discrete(name = "Month", labels = c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"))
-
-  geom_histogram(mapping = aes(x=MONTH, fill=as.factor(MONTH)), binwidth = 1)
 ```
 
 ## Katie's Individual Section
