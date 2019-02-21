@@ -144,4 +144,6 @@ ggplot(data=delay_month_CO) +
 
 
 ## Team Summary 
-I, Madeline Garrett, worked to determine which airline had the most delayed departures from Denver. I used the count function to find a collection of probabilities and found that the airline with the most delayed departures was Southwest. I used the geom bar function and made two plots that should help to illustrate which airlines had the most delays. I labeled both axis and header and use the alpha function on one of the graphs. 
+* I, Madeline Garrett, worked to determine which airline had the most delayed departures from Denver. I used the count function to find a collection of probabilities and found that the airline with the most delayed departures was Southwest. I used the geom bar function and made two plots that should help to illustrate which airlines had the most delays. I labeled both axis and header and use the alpha function on one of the graphs.
+
+* I, Kevin Luth, determined which months had higher probabilities of a flight being delayed by weather-related causes. I found that August had the highest chance, followed by Janurary, February, and December. I used the geom_histogram function to make a plot displaying the number of delayed flights due to weather by month. I changed the title and labels to make their representation clearer. I also changed the color of each month to make it easier to distinguish between them. Finally, I used the scale_fill_discrete function to change the labels for the legend colors to the month names to make it easier to interpret the graph.
