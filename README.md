@@ -15,7 +15,56 @@ summary(COflights)
 ```
 # Team Section 
 Question 1: Determine what factors increase the probability of a delayed arrival and decrease the probability of a delayed arrival.
-
+```{r}
+count(COflights, DEST == "DEN", MONTH == 1, ARR_DELAY != "NA")
+count(COflights, DEST == "DEN", MONTH ==1, ARR_DELAY >= 15)
+3738/16704
+count(COflights, DEST == "DEN", MONTH == 2, ARR_DELAY != "NA")
+count(COflights, DEST == "DEN", MONTH == 2, ARR_DELAY >= 15)
+2159/15409
+count(COflights, DEST == "DEN", MONTH == 3, ARR_DELAY != "NA")
+count(COflights, DEST == "DEN", MONTH == 3, ARR_DELAY >= 15)
+3023/18394
+count(COflights, DEST == "DEN", MONTH == 4, ARR_DELAY != "NA")
+count(COflights, DEST == "DEN", MONTH == 4, ARR_DELAY >= 15)
+2443/17609
+count(COflights, DEST == "DEN", MONTH == 5, ARR_DELAY != "NA")
+count(COflights, DEST == "DEN", MONTH == 5, ARR_DELAY >= 15)
+3268/19017
+count(COflights, DEST == "DEN", MONTH == 6, ARR_DELAY != "NA")
+count(COflights, DEST == "DEN", MONTH == 6, ARR_DELAY >= 15)
+3491/19796
+count(COflights, DEST == "DEN", MONTH == 7, ARR_DELAY != "NA")
+count(COflights, DEST == "DEN", MONTH == 7, ARR_DELAY >= 15)
+3773/20458
+count(COflights, DEST == "DEN", MONTH == 8, ARR_DELAY != "NA")
+count(COflights, DEST == "DEN", MONTH == 8, ARR_DELAY >= 15)
+3927/20590
+count(COflights, DEST == "DEN", MONTH == 9, ARR_DELAY != "NA")
+count(COflights, DEST == "DEN", MONTH == 9, ARR_DELAY >= 15)
+1945/18660
+count(COflights, DEST == "DEN", MONTH == 10, ARR_DELAY != "NA")
+count(COflights, DEST == "DEN", MONTH == 10, ARR_DELAY >= 15)
+2461/19071
+count(COflights, DEST == "DEN", MONTH == 11, ARR_DELAY != "NA")
+count(COflights, DEST == "DEN", MONTH == 11, ARR_DELAY >= 15)
+1464/17582
+count(COflights, DEST == "DEN", MONTH == 12, ARR_DELAY != "NA")
+count(COflights, DEST == "DEN", MONTH == 12, ARR_DELAY >= 15)
+3261/17990
+```
+January: 0.2237787 -> 22.37%
+February: 0.1401129 -> 14.01%
+March: 0.1643471 -> 16.43%
+April: 0.1387359 -> 13.87%
+May: 0.1718462 -> 17.18%
+June: 0.1763488 -> 17.63%
+July: 0.1844266 -> 18.44%
+August: 0.1907237 -> 19.07%
+September: 0.1042337 -> 10.42%
+October: 0.1290441 -> 12.90%
+November: 0.08326698 -> 8.33%
+December: 0.1812674 -> 18.13%
 
 
 
@@ -53,8 +102,7 @@ COflights %>%
   filter(LATE_AIRCRAFT_DELAY>0) %>%
   summarise(late_aircraft=n())
 ```
-### Probabilities for Delays by: Carrier, Weather, NAS, Security, and Aircraft 
-                  (# of flights delayed by category/total # of flights delayed)
+### Probabilities for Delays by: Carrier Delay, Weather Delay, NAS Delay, Security Delay, and Aircraft Delay
 * Carrier Delay = 41209/163855 = 0.2515 = 25.15%
 * Weather Delay = 3725/163855 = 0.0227 = 2.27%
 * NAS Delay = 44416/163855 = 0.271 = 27.1%
@@ -151,7 +199,7 @@ Does the distance between Denver and the origin airport effect arrival delays?
 Katie's Findings: As the distance of the origin airport from Denver increases, the probability that that flight will be delayed by at least 15 minutes increases.delay 
 
 ## Zandy's Individual Section
-How does the probabily of a delayed flight from Denver or a delayed flight to Denver change based on the scheduled arrival time of the plane and/or the scheduled departure time of the plane.
+How does the probabily of a delayed flight from Denver or a delayed flight to Denver change based on the scheduled arrival time of the plane and/pr the scheduled departure time of the plane.
 
 
 ## Team Summary 
