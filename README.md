@@ -104,7 +104,7 @@ ggplot(data=delay_carrier_CO) +
   ylab("Number of Late Arrivals")
 ```
 ## Kevin's Individual Section
-How does the probability of a weather departure delay from DEN change based on month?
+How does the probability of a departure delay from DEN caused by weather change based on the month?
 
 ```{r}
 delay_month_CO <- COflights %>%
