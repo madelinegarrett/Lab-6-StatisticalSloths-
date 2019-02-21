@@ -15,26 +15,6 @@ summary(COflights)
 ```
 # Team Section 
 Question 1: Determine what factors increase the probability of a delayed arrival and decrease the probability of a delayed arrival.
-
-```{r}
-delay_carrier_CO <- COflights %>%
-  filter(ORIGIN=="DEN") %>%
-  group_by(CARRIER) %>%
-  filter(ARR_DELAY >= 15)
-
-
-ggplot(data = delay_carrier_CO) + 
-  geom_bar(mapping = aes(x=MONTH, fill=as.factor(MONTH)))+
-facet_grid(~as.factor(MONTH))
-
-
-
-ggplot(data = delay_carrier_CO) + 
-  geom_bar(mapping = aes(x = MONTH))
-
-```
-
-
 ```{r}
 count(COflights, DEST == "DEN", MONTH == 1, ARR_DELAY != "NA")
 count(COflights, DEST == "DEN", MONTH ==1, ARR_DELAY >= 15)
@@ -219,8 +199,7 @@ Does the distance between Denver and the origin airport effect arrival delays?
 Katie's Findings: As the distance of the origin airport from Denver increases, the probability that that flight will be delayed by at least 15 minutes increases.delay 
 
 ## Zandy's Individual Section
-How does the probabily of a delayed flight from Denver or a delayed flight to Denver change based on the scheduled arrival time of the plane and/pr the scheduled departure time of the plane.
-
+How does the probabily of a delayed flight(by departure time) from Denver change based on the delay of the planes arrival time to Denver.
 
 ## Team Summary 
 * I, Madeline Garrett, worked to determine which airline had the most delayed departures from Denver. I used the count function to find a collection of probabilities and found that the airline with the most delayed departures was Southwest. I used the geom bar function and made two plots that should help to illustrate which airlines had the most delays. I labeled both axis and header and use the alpha function on one of the graphs.
