@@ -53,7 +53,8 @@ COflights %>%
   filter(LATE_AIRCRAFT_DELAY>0) %>%
   summarise(late_aircraft=n())
 ```
-### Probabilities for Delays by: Carrier Delay, Weather Delay, NAS Delay, Security Delay, and Aircraft Delay
+### Probabilities for Delays by: Carrier, Weather, NAS, Security, and Aircraft 
+                  (# of flights delayed by category/total # of flights delayed)
 * Carrier Delay = 41209/163855 = 0.2515 = 25.15%
 * Weather Delay = 3725/163855 = 0.0227 = 2.27%
 * NAS Delay = 44416/163855 = 0.271 = 27.1%
