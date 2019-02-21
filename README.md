@@ -115,3 +115,5 @@ delay_month_CO <- COflights %>%
 ggplot(data=delay_month_CO) + 
   geom_bar(mapping = aes(x=MONTH, fill=as.factor(MONTH)))
 ```
+## Team Summary 
+I, Madeline Garrett, worked to determine which airline had the most delayed departures from Denver. I used the count function to find a collection of probabilities and found that the airline with the most delayed departures was Southwest. I used the geom bar function and made two plots that should help to illustrate which airlines had the most delays. I labeled both axis and header and use the alpha function on one of the graphs. 
