@@ -231,76 +231,55 @@ ggplot(data = COflights) +
 ```{r}
 COflights %>% 
   filter(!is.na(DEP_DELAY)) %>%
-  filter((DEP_DELAY > 0) & (DEP_DELAY <= 252)) %>%
+  filter((DEP_DELAY > 0)  %>%
   summarise(DEP_DELAY=n())
 
 COflights %>% 
   filter(!is.na(DEP_DELAY)) %>%
-  filter((DEP_DELAY > 252) & (DEP_DELAY <= 504)) %>%
+  filter(!is.na(ARR_DELAY)) %>%
+  filter((DEP_DELAY > 0) & ((ARR_DELAY > 0) & (ARR_DELAY <= 252))) %>%
   summarise(DEP_DELAY=n())
 
 
 COflights %>% 
   filter(!is.na(DEP_DELAY)) %>%
-  filter((DEP_DELAY > 504) & (DEP_DELAY <= 756)) %>%
+  filter(!is.na(ARR_DELAY)) %>%
+  filter((DEP_DELAY > 0) & ((ARR_DELAY > 252) & (ARR_DELAY <= 504))) %>%
   summarise(DEP_DELAY=n())
+  
+COflights %>% 
+  filter(!is.na(DEP_DELAY)) %>%
+  filter(!is.na(ARR_DELAY)) %>%
+  filter((DEP_DELAY > 0) & ((ARR_DELAY > 504) & (ARR_DELAY <= 756))) %>%
+  summarise(DEP_DELAY=n())
+  
+COflights %>% 
+  filter(!is.na(DEP_DELAY)) %>%
+  filter(!is.na(ARR_DELAY)) %>%
+  filter((DEP_DELAY > 0) & ((ARR_DELAY > 756) & (ARR_DELAY <= 1008))) %>%
+  summarise(DEP_DELAY=n())
+  
 
 COflights %>% 
   filter(!is.na(DEP_DELAY)) %>%
-  filter((DEP_DELAY > 756) & (DEP_DELAY <= 1008)) %>%
+  filter(!is.na(ARR_DELAY)) %>%
+  filter((DEP_DELAY > 0) & ((ARR_DELAY > 1008) & (ARR_DELAY <= 1260))) %>%
   summarise(DEP_DELAY=n())
+  
 
 COflights %>% 
   filter(!is.na(DEP_DELAY)) %>%
-  filter((DEP_DELAY > 1008) & (DEP_DELAY <= 1260)) %>%
+  filter(!is.na(ARR_DELAY)) %>%
+  filter((DEP_DELAY > 0) & ((ARR_DELAY > 1260) & (ARR_DELAY <= 1512))) %>%
   summarise(DEP_DELAY=n())
+  
 
 COflights %>% 
   filter(!is.na(DEP_DELAY)) %>%
-  filter((DEP_DELAY > 1260) & (DEP_DELAY <= 1512)) %>%
+  filter(!is.na(ARR_DELAY)) %>%
+  filter((DEP_DELAY > 0) & ((ARR_DELAY > 1512) & (ARR_DELAY <= 1764))) %>%
   summarise(DEP_DELAY=n())
-
-COflights %>% 
-  filter(!is.na(DEP_DELAY)) %>%
-  filter((DEP_DELAY > 1512) & (DEP_DELAY <= 1764)) %>%
-  summarise(DEP_DELAY=n())
-
-COflights %>% 
-  filter(!is.na(ARR_DELAY)) %>%
-  filter((ARR_DELAY > 0) & (ARR_DELAY <= 252)) %>%
-  summarise(ARR_DELAY=n())
-
-COflights %>% 
-  filter(!is.na(ARR_DELAY)) %>%
-  filter((ARR_DELAY > 252) & (ARR_DELAY <= 504)) %>%
-  summarise(ARR_DELAY=n())
-
-
-COflights %>% 
-  filter(!is.na(ARR_DELAY)) %>%
-  filter((ARR_DELAY > 504) & (ARR_DELAY <= 756)) %>%
-  summarise(ARR_DELAY=n())
-
-COflights %>% 
-  filter(!is.na(ARR_DELAY)) %>%
-  filter((ARR_DELAY > 756) & (ARR_DELAY <= 1008)) %>%
-  summarise(ARR_DELAY=n())
-
-COflights %>% 
-  filter(!is.na(ARR_DELAY)) %>%
-  filter((ARR_DELAY > 1008) & (ARR_DELAY <= 1260)) %>%
-  summarise(ARR_DELAY=n())
-
-COflights %>% 
-  filter(!is.na(ARR_DELAY)) %>%
-  filter((ARR_DELAY > 1260) & (ARR_DELAY <= 1512)) %>%
-  summarise(ARR_DELAY=n())
-
-COflights %>% 
-  filter(!is.na(ARR_DELAY)) %>%
-  filter((ARR_DELAY > 1512) & (ARR_DELAY <= 1764)) %>%
-  summarise(ARR_DELAY=n())
-
+  
 ggplot(data = COflights) +
   geom_point(mapping = aes(x = ARR_DELAY, y = DEP_DELAY),  color = "blue") +
   ggtitle("Arrival Delay(in minutes) vs. Departure Delay(in minutes)") +
