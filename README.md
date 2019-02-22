@@ -226,7 +226,7 @@ ggplot(data = COflights) +
 ```
 
 ## Zandy's Individual Section
- Does the probabily of a delayed flight(by departure time) from Denver increase based on the delay of the planes arrival time in Denver.
+ Does the probabily of a delayed flight time (by departure time) from Denver increase based on the delay of the planes arrival time increasing in Denver.
 
 ```{r}
 ggplot(data = COflights) +
