@@ -196,7 +196,16 @@ Does the distance between Denver and the origin airport effect arrival delays?
 * 500 Miles: 30796/191562 = 0.1607626 -> 16.07%
 * 1000 Miles: 10780/64615 = 0.1668343 -> 16.63%
 * 1500 Miles: 4721/25058 = 0.1884029 -> 18.84%
+
 Katie's Findings: As the distance of the origin airport from Denver increases, the probability that that flight will be delayed by at least 15 minutes increases.delay 
+
+```{r}
+ggplot(data = COflights) +
+  geom_jitter(mapping = aes(x= DISTANCE, y= ARR_DELAY))+
+  ggtitle("Distance from Denver vs Delayed Arrival")+
+  xlab("Distance")+
+  ylab("Arrival Delay")
+```
 
 ## Zandy's Individual Section
  Does the probabily of a delayed flight(by departure time) from Denver increase based on the delay of the planes arrival time in Denver.
@@ -205,3 +214,5 @@ Katie's Findings: As the distance of the origin airport from Denver increases, t
 * I, Madeline Garrett, worked to determine which airline had the most delayed departures from Denver. I used the count function to find a collection of probabilities and found that the airline with the most delayed departures was Southwest. I used the geom bar function and made two plots that should help to illustrate which airlines had the most delays. I labeled both axis and header and use the alpha function on one of the graphs.
 
 * I, Kevin Luth, determined which months had higher probabilities of a flight being delayed by weather-related causes. I found that August had the highest chance, followed by Janurary, February, and December. I used the geom_histogram function to make a plot displaying the number of delayed flights due to weather by month. I changed the title and labels to make their representation clearer. I also changed the color of each month to make it easier to distinguish between them. Finally, I used the scale_fill_discrete function to change the labels for the legend colors to the month names to make it easier to interpret the graph.
+
+* I, Katie Stewart, took probabilites to determine if the distance of an airport from Denver would affect airport delays. I found that as the distance from Denver increases so does the arrival delay time. I used the geom_jitter function to show my findings. In addition to the plot, I added a title so it would be easily understood as well as changing the x and y titles.  
