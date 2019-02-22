@@ -67,8 +67,6 @@ count(COflights, DEST == "DEN", MONTH == 12, ARR_DELAY >= 15)
 * December: 0.1812674 -> 18.13%
 
 
-
-
 Question 2: Are more flights delayed because of the carrier, weather, NAS, security issues, or aircraft late in arriving causing delays in departures?
 
 ```{r}
