@@ -208,7 +208,7 @@ ggplot(data = COflights) +
 ```
 
 ## Zandy's Individual Section
- Does the probabily of a delayed flight(by departure time) from Denver increase based on the delay of the planes arrival time increasing in Denver.
+ Does the probabily of a delayed flight(by departure time) from Denver increase based on the delay of the planes arrival time in Denver.
 
 ## Team Summary 
 * I, Madeline Garrett, worked to determine which airline had the most delayed departures from Denver. I used the count function to find a collection of probabilities and found that the airline with the most delayed departures was Southwest. I used the geom bar function and made two plots that should help to illustrate which airlines had the most delays. I labeled both axis and header and use the alpha function on one of the graphs.
