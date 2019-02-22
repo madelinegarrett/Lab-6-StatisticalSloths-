@@ -68,6 +68,7 @@ count(COflights, DEST == "DEN", MONTH == 12, ARR_DELAY >= 15)
 
 
 Question 2: Are more flights delayed because of the carrier, weather, NAS, security issues, or late aircraft arrival causing delays in departures?
+* Importance: This question is important because it helps to determine how often each type of delay occurs. This is helpful because it allows for the airport to pinpoint the root of the problem with delays, giving them a starting point to try to fix it.
 
 ```{r}
 team2q <- COflights %>%
@@ -120,6 +121,8 @@ Probabilities for Delays by: Carrier Delay, Weather Delay, NAS Delay, Security D
 * NAS Delay = 44416/163855 = 0.271 = 27.11%
 * Security Delay = 135/163855 = 0.000824 = 0.08%
 * Aircraft Delay = 43470/163855 = 0.265 = 26.53%
+
+* Conclusion: NAS delays have the highest probablility of happening so therefore is the main cause of flight delays.
 
 ## Madeline's Individual Section 
 Does Leaving Denver on a Specific Carrier's Flight Increase the Probability That Your Flight Will Be Delayed?
