@@ -226,7 +226,19 @@ ggplot(data = COflights) +
 ```
 
 ## Zandy's Individual Section
- Does the probabily of a delayed flight from Denver increase based on the delay of the planes arrival time in Denver.
+ How does the Probability of delayed flights change based on the number of minutes of arrival delay time increasing.
+ 
+ Probabilities based on number of delayed flights given a certain arrival delay time
+ 
+ * 0-252 minute Arrival delay = 112194/163855 = 0.685 = 68.5%
+ * 252-504 minute arrival delay = 1302/163855 = 0.00795 = 0.795%
+ * 504-756 minute arrival delay = 170/163855 = 0.00103 = 0.103%
+ * 756-1008 minute arrival delay = 122/163855 = 0.00074 = 0.074%
+ * 1008-1260 minute arrival delay = 55/163855 = 0.00034 = 0.034%
+ * 1260-1512 minute arrival delay = 27/163855 = 0.00016 =0.016%
+ * 1512-1764 minute arrival delay = 0/163855 = 0 = 0%
+ 
+ Zandy's Findings between my grapg and probabilities, I notice that most flights fall in the 0-252 minute arrival delay with their flights being delayed and that makes sense because in actuality, a very small amount of flights are actually delayed longer than 252 minutes. From the graph I noticed that as the arrival delay time increased so did the departure delay time which raises some questions because do the planes just leave or do they wait for the other plane to arrive.
 
 ```{r}
 COflights %>% 
@@ -293,4 +305,4 @@ ggplot(data = COflights) +
 
 * I, Katie Stewart, took probabilites to determine if the distance of an airport from Denver would affect airport delays. I found that as the distance from Denver increases so does the arrival delay time. I used the geom_jitter function to show my findings. In addition to the plot, I added a title so it would be easily understood as well as changing the x and y titles.  
 
-* I, Zandy Boone took probabilities to determine if the departure delay(in minutes) of an airplane increased as the arrival delay(in minutes) increased. I used the geom_point function to show Arrival delay vs Departure Delay in minutes. I changed the color of the dots and added a title, x label, and y label to give the graph some pop and make the graph easier to read.
+* I, Zandy Boone took probabilities to determine if the departure probability increased or decreased as the arrival delay time increased. I found that the probability of a delayed flight decreased as arrivl delay time increased but that as arrival delay time increased so did the departure delay time. I used the geom_point function to show Arrival delay vs Departure Delay in minutes. I changed the color of the dots and added a title, x label, and y label to give the graph some pop and make the graph easier to read.
