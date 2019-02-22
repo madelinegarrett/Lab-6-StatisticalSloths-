@@ -122,7 +122,9 @@ Probabilities for Delays by: Carrier Delay, Weather Delay, NAS Delay, Security D
 * Security Delay = 135/163855 = 0.000824 = 0.08%
 * Aircraft Delay = 43470/163855 = 0.265 = 26.53%
 
-* Conclusion: NAS delays have the highest probablility of happening so therefore is the main cause of flight delays.
+Conclusion: NAS delays have the highest probablility of happening so therefore is the main cause of flight delays.
+
+Recommendation: Our recommendation is to try to refine the process of directing the planes once they leave the gate. There is a chance that the problem is from the planes getting backed up on the runway so it would be helpful to collect new data on the amount of time spent waiting on the runway to more precisely determine the cause of the delay.
 
 ## Madeline's Individual Section 
 Does Leaving Denver on a Specific Carrier's Flight Increase the Probability That Your Flight Will Be Delayed?
