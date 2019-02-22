@@ -228,9 +228,18 @@ ggplot(data = COflights) +
 ## Zandy's Individual Section
  Does the probabily of a delayed flight(by departure time) from Denver increase based on the delay of the planes arrival time in Denver.
 
+```{r}
+ggplot(data = COflights) +
+  geom_point(mapping = aes(x = ARR_DELAY, y = DEP_DELAY, color = "blue")) +
+  ggtitle("Arrival Delay(in minutes) vs. Departure Delay(in minutes)") +
+  xlab("Arrival Delay(in minutes)") +
+  ylab("Departure Delay(in minutes)")
+```  
 ## Team Summary 
 * I, Madeline Garrett, worked to determine which airline had the most delayed departures from Denver. I used the count function to find a collection of probabilities and found that the airline with the most delayed departures was Southwest. I used the geom bar function and made two plots that should help to illustrate which airlines had the most delays. I labeled both axis and header and use the alpha function on one of the graphs.
 
 * I, Kevin Luth, determined which months had higher probabilities of a flight being delayed by weather-related causes. I found that August had the highest chance, followed by Janurary, February, and December. I used the geom_histogram function to make a plot displaying the number of delayed flights due to weather by month. I changed the title and labels to make their representation clearer. I also changed the color of each month to make it easier to distinguish between them. Finally, I used the scale_fill_discrete function to change the labels for the legend colors to the month names to make it easier to interpret the graph.
 
 * I, Katie Stewart, took probabilites to determine if the distance of an airport from Denver would affect airport delays. I found that as the distance from Denver increases so does the arrival delay time. I used the geom_jitter function to show my findings. In addition to the plot, I added a title so it would be easily understood as well as changing the x and y titles.  
+
+* I, Zandy Boone took probabilities to determine if the departure delay(in minutes) of an airplane increased as the arrival delay(in minutes) increased. I used the geom_point function to show Arrival delay vs Departure Delay in minutes. I changed the color of the dots and added a title, x label, and y label to give the graph some pop and make the graph easier to read.
