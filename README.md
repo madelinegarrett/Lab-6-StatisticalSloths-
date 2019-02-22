@@ -72,31 +72,45 @@ count(COflights, DEST == "DEN", MONTH == 12, ARR_DELAY >= 15)
 Question 2: Are more flights delayed because of the carrier, weather, NAS, security issues, or aircraft late in arriving causing delays in departures?
 
 ```{r}
+team2q <- COflights %>%
+  mutate(typeC=case_when(CARRIER_DELAY>0~"car")) %>%
+  mutate(typeW=case_when(WEATHER_DELAY>0~"wea")) %>%
+  mutate(typeN=case_when(NAS_DELAY>0~"nas")) %>%
+  mutate(typeS=case_when(SECURITY_DELAY>0~"sec")) %>%
+  mutate(typeL=case_when(LATE_AIRCRAFT_DELAY>0~"late")) %>%
+  filter(!is.na(typeC) | !is.na(typeW) | !is.na(typeN) | !is.na(typeS) | !is.na(typeL))
+
+ggplot(data=team2q) + 
+  geom_bar(mapping=aes(x=typeC, fill=typeC)) + 
+  geom_bar(mapping=aes(x=typeW, fill=typeW)) + 
+  geom_bar(mapping=aes(x=typeN, fill=typeN)) + 
+  geom_bar(mapping=aes(x=typeS, fill=typeS)) + 
+  geom_bar(mapping=aes(x=typeL, fill=typeL)) + 
+  ggtitle("Number of Delay Types") + 
+  xlab("Delay Type") + 
+  ylab("# of flights") + 
+  scale_fill_discrete(name = "Delay", labels = c("Carrier", "Late Aircraft", "NAS", "Security", "Weather"))
+
 COflights %>%
   filter(!is.na(DEP_DELAY)) %>%
   filter(DEP_DELAY>0) %>%
   summarise(total=n())
-
 COflights %>%
   filter(!is.na(CARRIER_DELAY)) %>%
   filter(CARRIER_DELAY>0) %>%
   summarise(carrier=n())
-
 COflights %>%
   filter(!is.na(WEATHER_DELAY)) %>%
   filter(WEATHER_DELAY>0) %>%
   summarise(weather=n())
-
 COflights %>%
   filter(!is.na(NAS_DELAY)) %>%
   filter(NAS_DELAY>0) %>%
   summarise(nas=n())
-
 COflights %>%
   filter(!is.na(SECURITY_DELAY)) %>%
   filter(SECURITY_DELAY>0) %>%
   summarise(security=n())
-
 COflights %>%
   filter(!is.na(LATE_AIRCRAFT_DELAY)) %>%
   filter(LATE_AIRCRAFT_DELAY>0) %>%
